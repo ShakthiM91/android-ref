@@ -1,16 +1,19 @@
 package com.example.protest;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class Camera extends Activity implements View.OnClickListener {
 
@@ -28,6 +31,8 @@ public class Camera extends Activity implements View.OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.photo);
 		initialize();
+		InputStream is = getResources().openRawResource(R.drawable.ic_launcher);
+		bmp = BitmapFactory.decodeStream(is);
 	}
 
 	private void initialize() {
@@ -68,8 +73,10 @@ public class Camera extends Activity implements View.OnClickListener {
 		if (resultCode == RESULT_OK) {
 			Bundle extras = data.getExtras();
 			bmp = (Bitmap) extras.get("data");
+			
 			try {
 				iview.setImageBitmap(bmp);
+				Toast.makeText(getApplicationContext(), "Done", Toast.LENGTH_LONG).show();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
