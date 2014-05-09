@@ -26,14 +26,13 @@ public final class R {
         public static final int start=0x7f020001;
     }
     public static final class id {
-        public static final int FrameLayout1=0x7f08001f;
-        public static final int ScrollView1=0x7f080014;
-        public static final int action_settings=0x7f080025;
+        public static final int FrameLayout1=0x7f08001e;
+        public static final int ScrollView1=0x7f080013;
+        public static final int action_settings=0x7f080024;
         public static final int analogClock1=0x7f080001;
-        public static final int bReturn=0x7f08001d;
+        public static final int bReturn=0x7f08001c;
         public static final int bSA=0x7f080011;
-        public static final int bSAFR=0x7f080012;
-        public static final int bSetWall=0x7f080017;
+        public static final int bSetWall=0x7f080016;
         public static final int btnSendEmail=0x7f08000f;
         public static final int container=0x7f080000;
         public static final int etAction=0x7f08000c;
@@ -43,27 +42,27 @@ public final class R {
         public static final int etOutro=0x7f08000e;
         public static final int etSend=0x7f080010;
         public static final int etStupid=0x7f08000a;
-        public static final int ibTakePic=0x7f080016;
-        public static final int imageView1=0x7f080023;
-        public static final int img_=0x7f080020;
-        public static final int ivReturnedPic=0x7f080015;
-        public static final int rBoth=0x7f08001c;
-        public static final int rCrazy=0x7f08001a;
-        public static final int rSuper=0x7f08001b;
-        public static final int rgAnswers=0x7f080019;
+        public static final int ibTakePic=0x7f080015;
+        public static final int imageView1=0x7f080022;
+        public static final int img_=0x7f08001f;
+        public static final int ivReturnedPic=0x7f080014;
+        public static final int rBoth=0x7f08001b;
+        public static final int rCrazy=0x7f080019;
+        public static final int rSuper=0x7f08001a;
+        public static final int rgAnswers=0x7f080018;
         public static final int scrollView=0x7f080002;
-        public static final int tab1=0x7f080021;
-        public static final int tab2=0x7f080022;
-        public static final int tab3=0x7f080024;
+        public static final int tab1=0x7f080020;
+        public static final int tab2=0x7f080021;
+        public static final int tab3=0x7f080023;
         public static final int textView1=0x7f080003;
         public static final int textView2=0x7f080005;
         public static final int textView3=0x7f080007;
         public static final int textView4=0x7f080009;
         public static final int textView5=0x7f08000b;
         public static final int textView6=0x7f08000d;
-        public static final int tvGOT=0x7f080013;
-        public static final int tvQuestion=0x7f080018;
-        public static final int tvTest=0x7f08001e;
+        public static final int tvGOT=0x7f080012;
+        public static final int tvQuestion=0x7f080017;
+        public static final int tvTest=0x7f08001d;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

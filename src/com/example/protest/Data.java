@@ -9,12 +9,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View;
 
-public class Data extends Activity implements View.OnClickListener{
+public class Data extends Activity implements View.OnClickListener {
 
-	Button start, startFor;
+	Button start;
 	EditText sendET;
 	TextView gotAnswer;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -22,14 +22,12 @@ public class Data extends Activity implements View.OnClickListener{
 		setContentView(R.layout.get);
 		init();
 	}
-	
-	private void init(){
-		start = (Button)findViewById(R.id.bSA);
-		startFor=(Button)findViewById(R.id.bSAFR);
-		sendET=(EditText)findViewById(R.id.etSend);
-		gotAnswer=(TextView)findViewById(R.id.tvGOT);
+
+	private void init() {
+		start = (Button) findViewById(R.id.bSA);
+		sendET = (EditText) findViewById(R.id.etSend);
+		gotAnswer = (TextView) findViewById(R.id.tvGOT);
 		start.setOnClickListener(this);
-		startFor.setOnClickListener(this);
 	}
 
 	@Override
@@ -42,11 +40,8 @@ public class Data extends Activity implements View.OnClickListener{
 			basket.putString("key", bread);
 			Intent a = new Intent(Data.this, OpenedClass.class);
 			a.putExtras(basket);
-			startActivity(a);
-			break;
-		case R.id.bSAFR:
-			Intent i = new Intent(Data.this, OpenedClass.class);
-			startActivityForResult(i, 0);
+			// startActivity(a);
+			startActivityForResult(a, 0);
 			break;
 		}
 	}
@@ -55,8 +50,11 @@ public class Data extends Activity implements View.OnClickListener{
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode == RESULT_OK) {
+			Bundle basket = data.getExtras();
+			String s = basket.getString("answer");
+			gotAnswer.setText(s);
+		}
 	}
-	
-	
 
 }

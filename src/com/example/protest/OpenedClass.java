@@ -1,6 +1,7 @@
 package com.example.protest;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -41,7 +42,12 @@ public class OpenedClass extends Activity implements OnClickListener,
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-
+		Intent person = new Intent();
+		Bundle backpack = new Bundle();
+		backpack.putString("answer", sendData);
+		person.putExtras(backpack);
+		setResult(RESULT_OK, person);
+		finish();
 	}
 
 	@Override
