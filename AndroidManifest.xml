@@ -68,6 +68,23 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="Data"
+            android:label="Data" >
+            <intent-filter>
+                <action android:name="com.example.protest.DATA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity><activity
+            android:name="OpenedClass"
+            android:label="Open Class" >
+            <intent-filter>
+                <action android:name="com.example.protest.OPENEDCLASS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
